@@ -1,0 +1,17 @@
+@import "~normalize.css";
+@import "./btn.css";
+@import "./card-list.css";
+@import "./main-page.css";
+
+@font-face {
+    font-family: Quicksand;
+    src: url('../fonts/Quicksand-SemiBold.ttf');
+}
+
+* {
+    font-family: Quicksand;
+}
+
+#root {
+    background-color: #fcfcfc;
+}
