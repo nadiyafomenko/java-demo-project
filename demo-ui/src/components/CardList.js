@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Card from './Card'
+import CardInfModal from './CardInfModal'
 
 export default class CardList extends React.Component {
     constructor() {
@@ -8,8 +9,17 @@ export default class CardList extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            items: []
+            items: [],
+            isModalVisible: false
         };
+        this.handleModalVisibility = this.handleModalVisibility.bind(this) 
+    }
+
+    handleModalVisibility(){
+        console.log("...")
+        this.setState = {
+            isModalVisible: this.state.isModalVisible ? false : true
+        }
     }
 
     componentDidMount() {
@@ -36,13 +46,14 @@ export default class CardList extends React.Component {
         return (
             <div className="card-list-container">
                 <div className="table-card-list">
-                    <div>Doctor</div>
-                    <div>Procedure</div>
-                    <div>Date</div>
+                    <span>Doctor</span>
+                    <span>Procedure</span>
+                    <span>Date</span>
                 </div>
-                {this.state.items.map(item =>
-                    <Card key={item.id} procedureName={item.procedureName} doctor={item.doctor}/>
-                )}
+                {this.state.items.map(item => 
+                        <Card key={item.id} procedureName={item.procedureName} doctor={item.doctor} onClick = {this.handleModalVisibility}/>
+                )} 
+                <CardInfModal items = {this.state.items} handleModalVisibility = {this.handleModalVisibility} isModalVisible = {this.state.isModalVisible}/>  
             </div>
         )
     }

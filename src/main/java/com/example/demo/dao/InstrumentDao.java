@@ -18,11 +18,6 @@ public class InstrumentDao {
                 .cardId(1)
                 .name("Instrument")
                 .build());
-        instruments.add(Instrument.builder()
-                .id(2)
-                .cardId(2)
-                .name("Instrument2")
-                .build());
     }
 
     public List<Instrument> getByCardId(int id) {
