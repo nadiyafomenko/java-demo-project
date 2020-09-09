@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/style.css';
-import MainPage from './MainPage';
+import MainPageComponent from './MainPageComponent';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-        <MainPage/>
+        <MainPageComponent/>
     </React.StrictMode>,
     document.getElementById('root')
 );

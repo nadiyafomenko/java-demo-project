@@ -9,9 +9,9 @@
 }
 
 * {
-    font-family: Quicksand;
+    font-family: Quicksand !important;
 }
 
 #root {
-    background-color: #fcfcfc;
+    background-color: #f7f7f7;
 }

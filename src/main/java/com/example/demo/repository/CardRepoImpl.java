@@ -31,7 +31,8 @@ public class CardRepoImpl implements CardRepository {
         return card;
     }
     @Override
-    public List<Card> getAll() { return cardDao.getAll(); }
+    public List<Card> getAll() {
+        return cardDao.getAll(); }
 
     public List<Card> save(Card card) {
         cardDao.save(card);

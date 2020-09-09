@@ -18,11 +18,6 @@ public class EquipmentDao {
                 .cardId(1)
                 .name("Equipment")
                 .build());
-        equipment.add(Equipment.builder()
-                .id(2)
-                .cardId(2)
-                .name("Equipment2")
-                .build());
     }
 
     public List<Equipment> getByCardId(int id) {
