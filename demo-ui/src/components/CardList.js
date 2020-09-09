@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Card from './Card'
-import CardInfModal from './CardInfModal'
+import CardInfoModal from './CardInfoModal'
 
 export default class CardList extends React.Component {
     constructor() {
@@ -53,7 +53,7 @@ export default class CardList extends React.Component {
                 {this.state.items.map(item => 
                         <Card key={item.id} procedureName={item.procedureName} doctor={item.doctor} onClick = {this.handleModalVisibility}/>
                 )} 
-                <CardInfModal items = {this.state.items} handleModalVisibility = {this.handleModalVisibility} isModalVisible = {this.state.isModalVisible}/>  
+                <CardInfoModal items = {this.state.items} handleModalVisibility = {this.handleModalVisibility} isModalVisible = {this.state.isModalVisible}/>
             </div>
         )
     }

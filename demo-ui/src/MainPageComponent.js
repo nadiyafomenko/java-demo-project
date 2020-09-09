@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import CardList from './components/CardList'
 import AddCardModal from './components/AddCardModal'
 
-class MainPage extends React.Component {
+class MainPageComponent extends React.Component {
     constructor(){
         super()
         this.state = {
@@ -42,4 +42,4 @@ class MainPage extends React.Component {
     }
 }
 
-export default MainPage;
+export default MainPageComponent;
